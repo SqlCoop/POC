@@ -14,6 +14,7 @@ where it will continue running to completion.
 Based on Blog at https://dba.stackexchange.com/questions/211388/sql-server-try-catch-resume-on-terminating-error
 The scenario emphasis in the above blog focuses on running multiple embedded proces, and even if some of them failed,
 a error will be generated; but the parent procedure will not stop and will continually process the remaining procedures.
+
 */-----------------------
 
 USE CatchingErrors_In_EmbeddedProcedures

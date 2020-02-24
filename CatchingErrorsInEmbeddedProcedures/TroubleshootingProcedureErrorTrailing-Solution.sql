@@ -1,10 +1,12 @@
 /*-----------------------
 CORRECT EXAMPLE
 The code in this example represents the scenario whereby when an error occurs in an embedded child procedure,
-you will receive the errror/line number from childProc, as well as the line number in parent just after where the childProc 
+you will receive the error/line number from childProc, as well as the line number in parent just after where the childProc 
 was called from.
 
 */-----------------------
+
+
 
 USE CatchingErrors_In_EmbeddedProcedures
 GO
@@ -32,7 +34,7 @@ CREATE TABLE #TEMP(LastName varchar(10))
 		RAISERROR(@CustomErrorMessage, 16, 1); 
 	END CATCH
 
-	SELECT 'Parent Procedure Completed';
+	SELECT 'Parent Procedure Completed Successfully';
 END TRY
 BEGIN CATCH
 	EXEC DisplayErrorInfo
